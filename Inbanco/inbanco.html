@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="Carogame"></p>
+
+
+<script>
+var arr =[];
+var result="";
+
+for(i=0;i<5;i++)//khoi tao mang 2 chieu
+{
+    arr[i]= new Array(0,0,0,0,0);
+}
+for(i=0;i<5;i++)//hien tho mang 2 chieu
+{
+    for (j=0;j<5;j++)
+    {
+        result=result+arr[i][j]+"&nbsp;&nbsp;";
+    } result=result+"</br>";
+}
+result=result+"<br/><br/><input type='button' value='change value' onclick='changevalue();'><br/>";
+document.getElementById("Carogame").innerHTML=result;
+//////////////////////////////////
+function changevalue() {
+var nhapvitrihang=prompt("Nhap vi tri hang");
+var nhapvitricot=prompt("Nhap vi tri cot");
+arr[nhapvitrihang][nhapvitricot]="x";
+for (i=0;i<5;i++) {
+    for (j=0;j<5;j++)
+    {
+      result=result+arr[i][j]+"&nbsp;&nbsp;";
+    }result=result+"</br>";
+  }
+result=result+"<br/>";
+document.getElementById("Carogame").innerHTML=result;
+}
+
+
+</script>
+</body>
+</html>
